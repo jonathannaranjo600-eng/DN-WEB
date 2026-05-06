@@ -11,6 +11,13 @@ if (botonMenu && menuDesplegable) {
     botonMenu.classList.toggle('activo');
     menuDesplegable.classList.toggle('visible');
   });
+
+  menuDesplegable.querySelectorAll('a.enlace-menu-desplegable').forEach(enlace => {
+    enlace.addEventListener('click', () => {
+      botonMenu.classList.remove('activo');
+      menuDesplegable.classList.remove('visible');
+    });
+  });
 }
 
 /* ---- CANVAS — GRADIENTE ONDULANTE ---- */
@@ -28,26 +35,29 @@ if (canvasGradiente) {
   function animarCanvas() {
     contexto.clearRect(0, 0, anchoCanvas, altoCanvas);
 
-    const centroX1 = anchoCanvas * 0.3 + Math.sin(tiempoAnimacion * 0.004) * anchoCanvas * 0.25;
-    const centroY1 = altoCanvas  * 0.4 + Math.cos(tiempoAnimacion * 0.003) * altoCanvas  * 0.3;
-    const gradiente1 = contexto.createRadialGradient(centroX1, centroY1, 0, centroX1, centroY1, anchoCanvas * 0.55);
-    gradiente1.addColorStop(0, 'rgba(118, 56, 24, 0.18)');
+    const centroX1 = anchoCanvas * 0.3 + Math.sin(tiempoAnimacion * 0.0018) * anchoCanvas * 0.38;
+    const centroY1 = altoCanvas  * 0.4 + Math.cos(tiempoAnimacion * 0.0013) * altoCanvas  * 0.42;
+    const gradiente1 = contexto.createRadialGradient(centroX1, centroY1, 0, centroX1, centroY1, anchoCanvas * 0.6);
+    gradiente1.addColorStop(0, 'rgba(118, 56, 24, 0.38)');
+    gradiente1.addColorStop(0.5, 'rgba(118, 56, 24, 0.12)');
     gradiente1.addColorStop(1, 'rgba(118, 56, 24, 0)');
     contexto.fillStyle = gradiente1;
     contexto.fillRect(0, 0, anchoCanvas, altoCanvas);
 
-    const centroX2 = anchoCanvas * 0.7 + Math.cos(tiempoAnimacion * 0.005) * anchoCanvas * 0.2;
-    const centroY2 = altoCanvas  * 0.6 + Math.sin(tiempoAnimacion * 0.004) * altoCanvas  * 0.25;
-    const gradiente2 = contexto.createRadialGradient(centroX2, centroY2, 0, centroX2, centroY2, anchoCanvas * 0.5);
-    gradiente2.addColorStop(0, 'rgba(231, 225, 202, 0.07)');
-    gradiente2.addColorStop(1, 'rgba(231, 225, 202, 0)');
+    const centroX2 = anchoCanvas * 0.72 + Math.cos(tiempoAnimacion * 0.0015) * anchoCanvas * 0.32;
+    const centroY2 = altoCanvas  * 0.6  + Math.sin(tiempoAnimacion * 0.0020) * altoCanvas  * 0.38;
+    const gradiente2 = contexto.createRadialGradient(centroX2, centroY2, 0, centroX2, centroY2, anchoCanvas * 0.55);
+    gradiente2.addColorStop(0, 'rgba(48, 72, 38, 0.55)');
+    gradiente2.addColorStop(0.5, 'rgba(48, 72, 38, 0.18)');
+    gradiente2.addColorStop(1, 'rgba(48, 72, 38, 0)');
     contexto.fillStyle = gradiente2;
     contexto.fillRect(0, 0, anchoCanvas, altoCanvas);
 
-    const centroX3 = anchoCanvas * 0.5 + Math.sin(tiempoAnimacion * 0.003 + 2) * anchoCanvas * 0.3;
-    const centroY3 = altoCanvas  * 0.3 + Math.cos(tiempoAnimacion * 0.006 + 1) * altoCanvas  * 0.2;
-    const gradiente3 = contexto.createRadialGradient(centroX3, centroY3, 0, centroX3, centroY3, anchoCanvas * 0.4);
-    gradiente3.addColorStop(0, 'rgba(118, 56, 24, 0.10)');
+    const centroX3 = anchoCanvas * 0.5 + Math.sin(tiempoAnimacion * 0.0012 + 2) * anchoCanvas * 0.42;
+    const centroY3 = altoCanvas  * 0.3 + Math.cos(tiempoAnimacion * 0.0022 + 1) * altoCanvas  * 0.32;
+    const gradiente3 = contexto.createRadialGradient(centroX3, centroY3, 0, centroX3, centroY3, anchoCanvas * 0.45);
+    gradiente3.addColorStop(0, 'rgba(118, 56, 24, 0.28)');
+    gradiente3.addColorStop(0.5, 'rgba(118, 56, 24, 0.08)');
     gradiente3.addColorStop(1, 'rgba(118, 56, 24, 0)');
     contexto.fillStyle = gradiente3;
     contexto.fillRect(0, 0, anchoCanvas, altoCanvas);
@@ -142,94 +152,57 @@ if (flechaSiguiente) {
 
 if (fondoImagen) cambiarServicio(0);
 
-/* ---- CARRUSEL DE PROYECTOS ---- */
-const datosProyectos = [
-  {
-    titulo:      'Stellar midnight coffee',
-    anio:        '2024',
-    descripcion: 'Identidad visual completa para una cafetería de especialidad con estética nocturna y sofisticada. El proyecto abarcó desde el logotipo hasta el sistema de aplicaciones en packaging, señalética y materiales de marca.',
-    imagen:      'assets/proyectos/stellar.png'
-  },
-  {
-    titulo:      'Encode',
-    anio:        '2026',
-    descripcion: 'Branding y desarrollo web para una startup tecnológica enfocada en soluciones de software educativo. Se definió desde cero la identidad visual, el tono de comunicación y la presencia digital.',
-    imagen:      'assets/proyectos/encode.jpg'
-  },
-  {
-    titulo:      'Smart Solution Factory',
-    anio:        '2025',
-    descripcion: 'Diseño de identidad corporativa para una empresa de consultoría e innovación industrial. El sistema visual transmite precisión, confianza y capacidad técnica a través de cada punto de contacto.',
-    imagen:      'assets/proyectos/ssf.png'
-  },
-  {
-    titulo:      'Helper',
-    anio:        '2024',
-    descripcion: 'Identidad y diseño de interfaz para una aplicación de asistencia doméstica. El proyecto incluyó el naming, la marca, el sistema de íconos y los flujos de UX para iOS y Android.',
-    imagen:      'assets/proyectos/helper.jpg'
-  },
-  {
-    titulo:      'Kuvo',
-    anio:        '2025',
-    descripcion: 'Branding integral para una marca de mobiliario urbano contemporáneo. Desde la identidad hasta el catálogo digital, cada pieza comunica modernidad, funcionalidad y diseño intencional.',
-    imagen:      'assets/proyectos/kuvo.png'
-  }
-];
+/* ---- SCROLL HORIZONTAL EN PROYECTOS ---- */
+const proyectosSeccion = document.getElementById('proyectos');
+const proyectosScrollH  = document.querySelector('.proyectos_scroll_h');
+const navBarra          = document.querySelector('.barra-navegacion');
 
-let indiceProyectoActivo = 0;
+let proyectosEnVista = false;
 
-const tituloProyecto      = document.getElementById('titulo_proyecto');
-const anioProyecto        = document.getElementById('anio_proyecto');
-const descripcionProyecto = document.getElementById('descripcion_proyecto');
-const imagenProyecto      = document.getElementById('imagen_proyecto');
-const flechaAnterior      = document.getElementById('flecha_anterior_proyecto');
-const flechaSiguienteP    = document.getElementById('flecha_siguiente_proyecto');
-
-function cambiarProyecto(nuevoIndice) {
-  if (!tituloProyecto || !descripcionProyecto || !imagenProyecto) return;
-
-  const total = datosProyectos.length;
-  indiceProyectoActivo = (nuevoIndice + total) % total;
-  const proyecto = datosProyectos[indiceProyectoActivo];
-
-  tituloProyecto.style.opacity      = '0';
-  anioProyecto.style.opacity        = '0';
-  descripcionProyecto.style.opacity = '0';
-
-  setTimeout(() => {
-    tituloProyecto.textContent      = proyecto.titulo;
-    anioProyecto.textContent        = proyecto.anio;
-    descripcionProyecto.textContent = proyecto.descripcion;
-    imagenProyecto.style.backgroundImage = `url('${proyecto.imagen}')`;
-
-    tituloProyecto.style.opacity      = '1';
-    anioProyecto.style.opacity        = '1';
-    descripcionProyecto.style.opacity = '1';
-  }, 280);
+if (proyectosSeccion) {
+  const contenedorV = document.querySelector('.contenedor-principal--scroll');
+  const observadorP = new IntersectionObserver((entries) => {
+    proyectosEnVista = entries[0].intersectionRatio >= 0.98;
+  }, { root: contenedorV, threshold: [0, 0.98, 1] });
+  observadorP.observe(proyectosSeccion);
 }
 
-if (flechaAnterior) {
-  flechaAnterior.addEventListener('click', () => cambiarProyecto(indiceProyectoActivo - 1));
-}
-if (flechaSiguienteP) {
-  flechaSiguienteP.addEventListener('click', () => cambiarProyecto(indiceProyectoActivo + 1));
+if (proyectosScrollH) {
+  let bloqueado = false;
+
+  proyectosScrollH.addEventListener('wheel', (e) => {
+    if (!proyectosEnVista) return;
+
+    const alFinal  = proyectosScrollH.scrollLeft + proyectosScrollH.clientWidth >= proyectosScrollH.scrollWidth - 2;
+    const alInicio = proyectosScrollH.scrollLeft <= 2;
+
+    if ((alFinal && e.deltaY > 0) || (alInicio && e.deltaY < 0)) return;
+
+    e.preventDefault();
+    if (bloqueado) return;
+    bloqueado = true;
+
+    const ancho = proyectosScrollH.clientWidth;
+    proyectosScrollH.scrollBy({ left: e.deltaY > 0 ? ancho : -ancho, behavior: 'smooth' });
+
+    setTimeout(() => { bloqueado = false; }, 650);
+  }, { passive: false });
 }
 
-if (imagenProyecto) cambiarProyecto(0);
-
-/* ---- NAV ACTIVO EN BASE.HTML (single-page scroll) ---- */
+/* ---- NAV ACTIVO EN BASE.HTML ---- */
 const pantallas = document.querySelectorAll('.pantalla-seccion[id]');
 const enlacesNavBase = document.querySelectorAll('.enlace-nav[href^="#"]');
 
 if (pantallas.length > 0 && enlacesNavBase.length > 0) {
   const contenedorScroll = document.querySelector('.contenedor-principal--scroll');
 
+  /* Marca el enlace activo — respeta data-nav para slides agrupadas */
   const observador = new IntersectionObserver((entradas) => {
     entradas.forEach(entrada => {
       if (entrada.isIntersecting) {
-        const id = entrada.target.id;
+        const navHref = entrada.target.dataset.nav || `#${entrada.target.id}`;
         enlacesNavBase.forEach(enlace => {
-          enlace.classList.toggle('enlace-nav--activo', enlace.getAttribute('href') === `#${id}`);
+          enlace.classList.toggle('enlace-nav--activo', enlace.getAttribute('href') === navHref);
         });
       }
     });
@@ -239,4 +212,117 @@ if (pantallas.length > 0 && enlacesNavBase.length > 0) {
   });
 
   pantallas.forEach(pantalla => observador.observe(pantalla));
+}
+
+/* ---- FAQ ACORDEÓN ---- */
+const faqItems = document.querySelectorAll('.faq_item');
+
+faqItems.forEach(item => {
+  item.querySelector('.faq_pregunta').addEventListener('click', () => {
+    const estaAbierto = item.classList.contains('abierto');
+    faqItems.forEach(i => i.classList.remove('abierto'));
+    if (!estaAbierto) item.classList.add('abierto');
+  });
+});
+
+/* ---- HERO — REVEAL POR PALABRAS ---- */
+(function () {
+  const h1 = document.querySelector('.titulo-inicio');
+  if (!h1) return;
+  let idx = 0;
+
+  function procesarNodo(nodo) {
+    if (nodo.nodeType === Node.TEXT_NODE) {
+      const frag = document.createDocumentFragment();
+      nodo.textContent.split(/(\s+)/).forEach(parte => {
+        if (/^\s+$/.test(parte)) {
+          frag.appendChild(document.createTextNode(parte));
+        } else if (parte.length > 0) {
+          const s = document.createElement('span');
+          s.className = 'hero-palabra';
+          s.style.animationDelay = (idx++ * 0.09) + 's';
+          s.textContent = parte;
+          frag.appendChild(s);
+        }
+      });
+      nodo.replaceWith(frag);
+    } else if (nodo.nodeType === Node.ELEMENT_NODE && nodo.tagName !== 'BR') {
+      nodo.classList.add('hero-palabra');
+      nodo.style.animationDelay = (idx++ * 0.09) + 's';
+    }
+  }
+
+  Array.from(h1.childNodes).forEach(procesarNodo);
+})();
+
+/* ---- ANIMACIONES DE ENTRADA ---- */
+document.body.classList.add('reveal-ready');
+
+const contenedorReveal = document.querySelector('.contenedor-principal--scroll');
+const elementosReveal  = document.querySelectorAll('.reveal');
+
+if (elementosReveal.length > 0) {
+  const observadorReveal = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('reveal--visible');
+        observadorReveal.unobserve(entrada.target);
+      }
+    });
+  }, { root: contenedorReveal, threshold: 0.05 });
+
+  elementosReveal.forEach(el => observadorReveal.observe(el));
+}
+
+/* ---- CURSOR PERSONALIZADO ---- */
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.body.classList.add('cursor-personalizado');
+
+  const cursorDot = document.getElementById('cursor-dot');
+  if (cursorDot) {
+    let mouseX = -100, mouseY = -100;
+    let dotX   = -100, dotY   = -100;
+    const LERP = 0.14;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest('a, button, label, [role="button"]')) {
+        cursorDot.classList.add('cursor-dot--hover');
+      }
+    });
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest('a, button, label, [role="button"]')) {
+        cursorDot.classList.remove('cursor-dot--hover');
+      }
+    });
+
+    (function animarDot() {
+      dotX += (mouseX - dotX) * LERP;
+      dotY += (mouseY - dotY) * LERP;
+      cursorDot.style.transform = `translate(${dotX - 9}px, ${dotY - 9}px)`;
+      requestAnimationFrame(animarDot);
+    })();
+
+    ['.tarjeta_perfil_revista', '.footer_crema'].forEach(selector => {
+      const zona = document.querySelector(selector);
+      if (zona) {
+        zona.addEventListener('mouseenter', () => cursorDot.classList.add('cursor-dot--oscuro'));
+        zona.addEventListener('mouseleave', () => cursorDot.classList.remove('cursor-dot--oscuro'));
+      }
+    });
+  }
+}
+
+/* ---- PROYECTOS — CONTADOR DE POSICIÓN ---- */
+const numActualEl = document.getElementById('proyectos_num_actual');
+
+if (proyectosScrollH && numActualEl) {
+  proyectosScrollH.addEventListener('scroll', () => {
+    const indice = Math.round(proyectosScrollH.scrollLeft / proyectosScrollH.clientWidth);
+    numActualEl.textContent = String(indice + 1).padStart(2, '0');
+  }, { passive: true });
 }

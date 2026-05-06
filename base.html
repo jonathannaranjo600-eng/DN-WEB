@@ -18,7 +18,7 @@
     <!-- NAV (sticky, compartido entre todas las secciones) -->
     <nav class="barra-navegacion">
       <div class="nav-logo">
-        <img src="assets/denaranjo logo.png" alt="De Naranjo Graphic Design" class="logo-imagen"/>
+        <a href="#inicio"><img src="assets/denaranjo logo.png" alt="De Naranjo Graphic Design" class="logo-imagen"/></a>
       </div>
       <div class="grupo-nav-derecha">
         <ul class="nav-enlaces">
@@ -38,8 +38,8 @@
     <!-- Menú desplegable -->
     <div class="menu-desplegable" id="menu-desplegable">
       <ul class="lista-menu-desplegable">
-        <li><span class="enlace-menu-desplegable">Cotizaciones</span></li>
-        <li><span class="enlace-menu-desplegable">Preguntas frecuentes</span></li>
+        <li><a href="#contacto" class="enlace-menu-desplegable">Cotizaciones</a></li>
+        <li><a href="#faq"      class="enlace-menu-desplegable">Preguntas frecuentes</a></li>
         <li><span class="enlace-menu-desplegable">Encode</span></li>
       </ul>
     </div>
@@ -54,31 +54,31 @@
           </h1>
         </div>
         <div class="columna-mockup-inicio">
-          <img src="assets/mockup ejemplo dn.png" alt="Mockup de proyectos" class="imagen-mockup"/>
+          <img src="assets/mockup ejemplo dn.png" alt="Mockup de proyectos" class="imagen-mockup reveal reveal--delay-2"/>
         </div>
       </section>
       <div class="contenedor-boton-explorar">
-        <a href="#acercade" class="boton-explorar">EXPLORAR</a>
+        <a href="#acercade" class="boton-explorar reveal reveal--delay-3">EXPLORAR</a>
       </div>
     </div>
 
     <!-- ==================== ACERCA DE ==================== -->
-    <div id="acercade" class="pantalla-seccion">
+    <div id="acercade" class="pantalla-seccion" data-nav="#acercade">
       <section class="seccion-acercade">
 
-        <div class="acercade-encabezado">
+        <div class="acercade-encabezado reveal">
           <span class="acercade-linea-decorativa"></span>
           <h2 class="acercade-titulo">Acerca de</h2>
           <span class="acercade-linea-decorativa"></span>
         </div>
 
-        <p class="acercade-descripcion">
+        <p class="acercade-descripcion reveal reveal--delay-1">
           Soy un diseñador gráfico apasionado por crear identidades visuales con propósito.
           Me especializo en branding, diseño editorial y desarrollo web, combinando estética
           y funcionalidad para comunicar ideas de forma clara e impactante.
         </p>
 
-        <div class="acercade-columnas">
+        <div class="acercade-columnas reveal reveal--delay-2">
 
           <div class="acercade-columna">
             <div class="acercade-icono-contenedor">
@@ -154,32 +154,80 @@
       </section>
     </div>
 
+    <!-- ==================== ACERCA DE — SLIDE 2: PERFIL ==================== -->
+    <div id="acercade-perfil" class="pantalla-seccion" data-nav="#acercade">
+      <section class="seccion_perfil_acercade">
+        <div class="tarjeta_perfil_revista reveal">
+
+          <!-- Lado izquierdo: texto -->
+          <div class="perfil_revista_texto">
+            <div>
+              <h2 class="perfil_revista_nombre">Jonathan Naranjo</h2>
+              <p class="perfil_revista_especialidades">Web&nbsp;&nbsp;|&nbsp;&nbsp;Branding&nbsp;&nbsp;|&nbsp;&nbsp;UI/UX</p>
+            </div>
+            <p class="perfil_revista_descripcion">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            <div class="perfil_revista_etiquetas">
+
+              <div class="perfil_etiqueta_wrap">
+                <span class="perfil_etiqueta">Misión</span>
+                <div class="perfil_etiqueta_tooltip">
+                  <p class="tooltip_titulo">Misión</p>
+                  <p class="tooltip_cuerpo">Crear diseños que comuniquen con propósito e impacto real, conectando marcas con las personas a través de la identidad visual.</p>
+                </div>
+              </div>
+
+              <div class="perfil_etiqueta_wrap">
+                <span class="perfil_etiqueta">Visión</span>
+                <div class="perfil_etiqueta_tooltip">
+                  <p class="tooltip_titulo">Visión</p>
+                  <p class="tooltip_cuerpo">Ser un referente en diseño gráfico y desarrollo web en Latinoamérica, reconocido por la precisión, el criterio y la intención detrás de cada proyecto.</p>
+                </div>
+              </div>
+
+              <div class="perfil_etiqueta_wrap">
+                <span class="perfil_etiqueta">Propósito</span>
+                <div class="perfil_etiqueta_tooltip">
+                  <p class="tooltip_titulo">Propósito</p>
+                  <p class="tooltip_cuerpo">Transformar ideas en identidades visuales que generen conexión, valor y diferenciación real en el mercado.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Lado derecho: imagen -->
+          <div class="perfil_revista_imagen">
+            <img src="assets/acerca de/yo.jpg" alt="Jonathan Naranjo" class="perfil_revista_foto"/>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
     <!-- ==================== SERVICIOS ==================== -->
     <div id="servicios" class="pantalla-seccion">
       <section class="seccion_servicios">
-        <div class="contenedor_principal_servicios">
-          <div class="fondo_imagen_servicios" id="fondo_imagen_servicios"></div>
-          <div class="overlay_servicios"></div>
-          <div class="contenido_servicios">
-            <div class="columna_titulo_servicios">
-              <h2 class="titulo_servicios" id="titulo_servicios">Diseño de<br/>Identidades</h2>
-            </div>
-            <div class="columna_detalle_servicios">
-              <p class="descripcion_servicios" id="descripcion_servicios">
-                Creamos identidades visuales únicas que comunican la esencia de tu marca.
-                Desde el concepto hasta la aplicación final, cada elemento está diseñado
-                con propósito y precisión para destacar en cualquier medio.
-              </p>
+        <div class="contenedor_principal_servicios reveal">
+
+          <!-- Lado izquierdo: imagen -->
+          <div class="servicios_card_imagen" id="fondo_imagen_servicios"></div>
+
+          <!-- Lado derecho: texto -->
+          <div class="servicios_card_texto">
+            <h2 class="titulo_servicios" id="titulo_servicios">Diseño de<br/>Identidades</h2>
+            <p class="descripcion_servicios" id="descripcion_servicios">Creamos identidades visuales únicas que comunican la esencia de tu marca. Desde el concepto hasta la aplicación final, cada elemento está diseñado con propósito y precisión para destacar en cualquier medio.</p>
+            <div class="servicios_card_acciones">
               <a href="#contacto" class="boton_cotizacion_servicios">Cotización</a>
+              <button class="flecha_servicios" id="flecha_siguiente_servicios" aria-label="Siguiente servicio">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
-            <button class="flecha_servicios" id="flecha_siguiente_servicios" aria-label="Siguiente servicio">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
           </div>
+
         </div>
-        <div class="barra_inferior_servicios">
+        <div class="barra_inferior_servicios reveal reveal--delay-1">
           <button class="item_servicio_barra activo_barra_servicios" data-indice="0">Identidad Visual</button>
           <button class="item_servicio_barra" data-indice="1">Branding</button>
           <button class="item_servicio_barra" data-indice="2">Desarrollo Web</button>
@@ -190,45 +238,227 @@
       </section>
     </div>
 
-    <!-- ==================== PROYECTOS ==================== -->
-    <div id="proyectos" class="pantalla-seccion">
-      <section class="seccion_proyectos">
-        <div class="columna_info_proyecto">
-          <div class="flechas_proyecto">
-            <button class="flecha_proyecto" id="flecha_anterior_proyecto" aria-label="Proyecto anterior">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <button class="flecha_proyecto" id="flecha_siguiente_proyecto" aria-label="Proyecto siguiente">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
+    <!-- ==================== SERVICIOS — SLIDE 2: PROCESO CREATIVO ==================== -->
+    <div id="servicios-proceso" class="pantalla-seccion" data-nav="#servicios">
+      <section class="seccion_proceso_creativo">
+
+        <div class="proceso_celda proceso_texto reveal">
+          <h2 class="proceso_titulo">Proceso Creativo :</h2>
+          <p class="proceso_descripcion">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi</p>
+        </div>
+
+        <div class="proceso_celda proceso_imagen_celda reveal reveal--delay-1">
+          <img src="assets/servicios/studio.jpg" alt="Estudio creativo" class="proceso_img"/>
+        </div>
+
+        <div class="proceso_celda proceso_imagen_celda reveal reveal--delay-2">
+          <img src="assets/servicios/general.jpg" alt="Proceso general" class="proceso_img"/>
+        </div>
+
+        <div class="proceso_celda proceso_texto reveal reveal--delay-3">
+          <p class="proceso_descripcion">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinciLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit loLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim</p>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- ==================== SERVICIOS — SLIDE 3: ETAPAS ==================== -->
+    <div id="servicios-etapas" class="pantalla-seccion" data-nav="#servicios">
+      <section class="seccion_etapas_servicios">
+
+        <!-- Fila 1: pasos 1-2 (izquierda) + imagen pequeña (derecha) -->
+        <div class="etapas_fila reveal">
+          <div class="etapas_pasos_bloque">
+            <div class="etapas_pasos_linea">
+              <div class="etapa_paso">
+                <sup class="etapa_sup">1</sup>
+                <span class="etapa_nombre">Preparación</span>
+              </div>
+              <span class="etapa_arrow">→</span>
+              <div class="etapa_paso">
+                <sup class="etapa_sup">2</sup>
+                <span class="etapa_nombre">Incubación</span>
+              </div>
+            </div>
           </div>
-          <div class="texto_proyecto">
-            <h2 class="titulo_proyecto" id="titulo_proyecto">Stellar midnight coffee</h2>
-            <span class="anio_proyecto" id="anio_proyecto">2024</span>
+          <div class="etapas_imagen_pequena">
+            <img src="assets/servicios/preparacion.jpg" alt="Preparación" class="etapa_img"/>
           </div>
         </div>
-        <div class="columna_previsualizador_proyecto">
-          <div class="tarjeta_proyecto">
-            <div class="imagen_tarjeta_proyecto" id="imagen_proyecto"></div>
-            <div class="overlay_descripcion_proyecto">
-              <p class="descripcion_proyecto" id="descripcion_proyecto">
-                Identidad visual completa para una cafetería de especialidad con estética nocturna y sofisticada.
-              </p>
+
+        <!-- Fila 2: imagen pequeña (izquierda) + pasos 3-4 (derecha) -->
+        <div class="etapas_fila reveal reveal--delay-2">
+          <div class="etapas_imagen_pequena">
+            <img src="assets/servicios/desarrollo.jpg" alt="Desarrollo" class="etapa_img"/>
+          </div>
+          <div class="etapas_pasos_bloque etapas_pasos_bloque--derecha">
+            <div class="etapas_pasos_linea">
+              <div class="etapa_paso">
+                <sup class="etapa_sup">3</sup>
+                <span class="etapa_nombre">Verificación</span>
+              </div>
+              <span class="etapa_arrow">→</span>
+              <div class="etapa_paso">
+                <sup class="etapa_sup">4</sup>
+                <span class="etapa_nombre">Desarrollo</span>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Fila 3: imagen grande (izquierda) + descripción (derecha) -->
+        <div class="etapas_fila etapas_fila--base reveal reveal--delay-4">
+          <div class="etapas_imagen_grande">
+            <img src="assets/servicios/setup.jpg" alt="Setup del proceso" class="etapa_img"/>
+          </div>
+          <div class="etapas_descripcion_bloque">
+            <p class="etapas_descripcion_texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate.</p>
+          </div>
+        </div>
+
       </section>
+    </div>
+
+    <!-- ==================== PROYECTOS ==================== -->
+    <div id="proyectos" class="pantalla-seccion">
+      <div class="proyectos_nav_indicador"><span id="proyectos_num_actual">01</span>&nbsp;/&nbsp;<span id="proyectos_num_total">05</span></div>
+
+      <!-- Navegación rápida -->
+      <a href="#servicios-etapas" class="proyectos_nav_rapido" aria-label="Volver a Servicios">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <div class="proyectos_scroll_h">
+
+        <!-- Proyecto 01 — Stellar midnight coffee -->
+        <div class="proyecto_panel">
+          <section class="seccion_proyecto_slide">
+            <div class="proyecto_cuadricula">
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/stellar.png')"></div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--info">
+                <div class="proyecto_info_inner">
+                  <span class="proyecto_slide_anio">2024</span>
+                  <h2 class="proyecto_slide_titulo">Stellar midnight coffee</h2>
+                  <p class="proyecto_slide_desc">Identidad visual completa para una cafetería de especialidad con estética nocturna y sofisticada. El proyecto abarcó desde el logotipo hasta el sistema de aplicaciones en packaging, señalética y materiales de marca.</p>
+                </div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--num">
+                <span class="proyecto_slide_contador">01</span>
+              </div>
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/stellar.png')"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Proyecto 02 — Encode -->
+        <div class="proyecto_panel">
+          <section class="seccion_proyecto_slide">
+            <div class="proyecto_cuadricula">
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/encode.jpg')"></div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--info">
+                <div class="proyecto_info_inner">
+                  <span class="proyecto_slide_anio">2026</span>
+                  <h2 class="proyecto_slide_titulo">Encode</h2>
+                  <p class="proyecto_slide_desc">Branding y desarrollo web para una startup tecnológica enfocada en soluciones de software educativo. Se definió desde cero la identidad visual, el tono de comunicación y la presencia digital.</p>
+                </div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--num">
+                <span class="proyecto_slide_contador">02</span>
+              </div>
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/encode.jpg')"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Proyecto 03 — Smart Solution Factory -->
+        <div class="proyecto_panel">
+          <section class="seccion_proyecto_slide">
+            <div class="proyecto_cuadricula">
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/ssf.png')"></div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--info">
+                <div class="proyecto_info_inner">
+                  <span class="proyecto_slide_anio">2025</span>
+                  <h2 class="proyecto_slide_titulo">Smart Solution Factory</h2>
+                  <p class="proyecto_slide_desc">Diseño de identidad corporativa para una empresa de consultoría e innovación industrial. El sistema visual transmite precisión, confianza y capacidad técnica a través de cada punto de contacto.</p>
+                </div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--num">
+                <span class="proyecto_slide_contador">03</span>
+              </div>
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/ssf.png')"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Proyecto 04 — Helper -->
+        <div class="proyecto_panel">
+          <section class="seccion_proyecto_slide">
+            <div class="proyecto_cuadricula">
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/helper.jpg')"></div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--info">
+                <div class="proyecto_info_inner">
+                  <span class="proyecto_slide_anio">2024</span>
+                  <h2 class="proyecto_slide_titulo">Helper</h2>
+                  <p class="proyecto_slide_desc">Identidad y diseño de interfaz para una aplicación de asistencia doméstica. El proyecto incluyó el naming, la marca, el sistema de íconos y los flujos de UX para iOS y Android.</p>
+                </div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--num">
+                <span class="proyecto_slide_contador">04</span>
+              </div>
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/helper.jpg')"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Proyecto 05 — Kuvo -->
+        <div class="proyecto_panel">
+          <section class="seccion_proyecto_slide">
+            <div class="proyecto_cuadricula">
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/kuvo.png')"></div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--info">
+                <div class="proyecto_info_inner">
+                  <span class="proyecto_slide_anio">2025</span>
+                  <h2 class="proyecto_slide_titulo">Kuvo</h2>
+                  <p class="proyecto_slide_desc">Branding integral para una marca de mobiliario urbano contemporáneo. Desde la identidad hasta el catálogo digital, cada pieza comunica modernidad, funcionalidad y diseño intencional.</p>
+                </div>
+              </div>
+              <div class="proyecto_celda proyecto_celda--num">
+                <span class="proyecto_slide_contador">05</span>
+              </div>
+              <div class="proyecto_celda proyecto_celda--img">
+                <div class="proyecto_bg_img" style="background-image: url('assets/proyectos/kuvo.png')"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </div>
     </div>
 
     <!-- ==================== CONTACTO ==================== -->
     <div id="contacto" class="pantalla-seccion">
       <section class="seccion_contacto">
 
-        <div class="columna_redes_contacto">
+        <div class="columna_redes_contacto reveal">
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="icono_red_social" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#E7E1CA" stroke-width="1.8" fill="none"/>
@@ -256,7 +486,7 @@
           </a>
         </div>
 
-        <div class="contenedor_formulario_contacto">
+        <div class="contenedor_formulario_contacto reveal reveal--delay-2">
           <h2 class="titulo_contacto">Hablame sobre tu proyecto</h2>
           <p class="subtitulo_contacto">¿Tienes en mente un proyecto diferente? hazme saber tu proyecto para recibir una cotización personalizada en menos de 48 horas</p>
           <form class="formulario_contacto" id="formulario_contacto" novalidate>
@@ -277,8 +507,108 @@
       </section>
     </div>
 
+    <!-- ==================== FAQ + FOOTER ==================== -->
+    <div id="faq" class="pantalla-seccion">
+
+      <!-- Zona FAQ -->
+      <div class="faq_zona">
+        <h2 class="faq_titulo reveal">FAQs</h2>
+        <div class="faq_lista">
+
+          <div class="faq_item">
+            <button class="faq_pregunta">
+              <span class="faq_pregunta_texto reveal reveal--delay-1">¿Qué herramientas y plataformas utilizas?</span>
+              <span class="faq_icono">+</span>
+            </button>
+            <div class="faq_respuesta">
+              <p class="faq_respuesta_texto">Trabajo principalmente con Figma, Adobe Creative Suite (Illustrator, Photoshop, InDesign) y para desarrollo web HTML, CSS y JavaScript vanilla. El stack varía según el alcance de cada proyecto.</p>
+            </div>
+          </div>
+
+          <div class="faq_item">
+            <button class="faq_pregunta">
+              <span class="faq_pregunta_texto reveal reveal--delay-2">¿Aceptas planes de pago?</span>
+              <span class="faq_icono">+</span>
+            </button>
+            <div class="faq_respuesta">
+              <p class="faq_respuesta_texto">Sí, ofrezco planes flexibles según el alcance del proyecto. Normalmente trabajo con un anticipo inicial y cuotas según avance de entregables.</p>
+            </div>
+          </div>
+
+          <div class="faq_item">
+            <button class="faq_pregunta">
+              <span class="faq_pregunta_texto reveal reveal--delay-3">¿Cuál es tu rango de precios?</span>
+              <span class="faq_icono">+</span>
+            </button>
+            <div class="faq_respuesta">
+              <p class="faq_respuesta_texto">Los precios varían según el tipo y complejidad del proyecto. Cotiza y te envío una propuesta personalizada en menos de 48 horas.</p>
+            </div>
+          </div>
+
+          <div class="faq_item">
+            <button class="faq_pregunta">
+              <span class="faq_pregunta_texto reveal reveal--delay-4">¿Puedo contratar diseño y desarrollo al mismo tiempo?</span>
+              <span class="faq_icono">+</span>
+            </button>
+            <div class="faq_respuesta">
+              <p class="faq_respuesta_texto">Absolutamente. Ofrezco servicios integrados de diseño gráfico y desarrollo web, garantizando coherencia visual y técnica en cada punto de contacto del proyecto.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer crema -->
+      <footer class="footer_crema">
+        <div class="footer_cuerpo reveal reveal--delay-2">
+
+          <div class="footer_cta">
+            <p class="footer_cta_texto">¿Listo para <em class="footer_cta_em">crear</em> tu siguiente <em class="footer_cta_em">proyecto</em>?</p>
+            <a href="#contacto" class="footer_cta_boton">Cotiza ahora</a>
+          </div>
+
+          <div class="footer_columna">
+            <p class="footer_col_titulo">Trabajos</p>
+            <ul class="footer_col_lista">
+              <li>SSF</li>
+              <li>Kuvo</li>
+              <li>Stellar</li>
+              <li>Helper</li>
+            </ul>
+          </div>
+
+          <div class="footer_columna">
+            <p class="footer_col_titulo">Servicios</p>
+            <ul class="footer_col_lista">
+              <li>Web</li>
+              <li>Branding</li>
+              <li>Publicidad</li>
+              <li>Social Media</li>
+            </ul>
+          </div>
+
+          <div class="footer_columna">
+            <p class="footer_col_titulo">Contacto</p>
+            <ul class="footer_col_lista">
+              <li>Correo</li>
+              <li>LinkedIn</li>
+              <li>Instagram</li>
+              <li>WhatsApp</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="footer_barra_inferior">
+          <p class="footer_copyright">Copyright 2026, todos los derechos reservados</p>
+          <p class="footer_creditos">Desarrollado y diseñado por De Naranjo</p>
+        </div>
+      </footer>
+
+    </div>
+
   </div><!-- fin contenedor-principal -->
 
+  <div id="cursor-dot"></div>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="funcionalidad.js"></script>
 </body>

@@ -32,33 +32,65 @@ if (canvasGradiente) {
     altoCanvas  = canvasGradiente.height = window.innerHeight;
   }
 
+  const paleta = {
+    oscuro: {
+      b1: ['rgba(118,56,24,0.38)', 'rgba(118,56,24,0.12)', 'rgba(118,56,24,0)'],
+      b2: ['rgba(48,72,38,0.55)',  'rgba(48,72,38,0.18)',  'rgba(48,72,38,0)'],
+      b3: ['rgba(118,56,24,0.28)', 'rgba(118,56,24,0.08)', 'rgba(118,56,24,0)'],
+    },
+    claro: {
+      b1: ['rgba(118,56,24,0.48)', 'rgba(118,56,24,0.16)', 'rgba(118,56,24,0)'],
+      b2: ['rgba(48,72,38,0.42)',  'rgba(48,72,38,0.14)',  'rgba(48,72,38,0)'],
+      b3: ['rgba(175,90,22,0.38)', 'rgba(175,90,22,0.12)', 'rgba(175,90,22,0)'],
+    }
+  };
+
   function animarCanvas() {
     contexto.clearRect(0, 0, anchoCanvas, altoCanvas);
+    if (document.documentElement.dataset.tema === 'claro') {
+      const celda = 52;
+      for (let x = celda / 2; x < anchoCanvas; x += celda) {
+        for (let y = celda / 2; y < altoCanvas; y += celda) {
+          const fx = Math.abs(x / anchoCanvas - 0.5) * 2;
+          const fy = Math.abs(y / altoCanvas - 0.5) * 2;
+          const fade = Math.max(0, 1 - Math.pow(Math.max(fx, fy), 1.6));
+          contexto.fillStyle = `rgba(118,56,24,${(fade * 0.13).toFixed(3)})`;
+          contexto.beginPath();
+          contexto.arc(x, y, 1.8, 0, Math.PI * 2);
+          contexto.fill();
+        }
+      }
+
+      requestAnimationFrame(animarCanvas);
+      return;
+    }
+
+    const c = paleta[document.documentElement.dataset.tema] || paleta.oscuro;
 
     const centroX1 = anchoCanvas * 0.3 + Math.sin(tiempoAnimacion * 0.0018) * anchoCanvas * 0.38;
     const centroY1 = altoCanvas  * 0.4 + Math.cos(tiempoAnimacion * 0.0013) * altoCanvas  * 0.42;
     const gradiente1 = contexto.createRadialGradient(centroX1, centroY1, 0, centroX1, centroY1, anchoCanvas * 0.6);
-    gradiente1.addColorStop(0, 'rgba(118, 56, 24, 0.38)');
-    gradiente1.addColorStop(0.5, 'rgba(118, 56, 24, 0.12)');
-    gradiente1.addColorStop(1, 'rgba(118, 56, 24, 0)');
+    gradiente1.addColorStop(0, c.b1[0]);
+    gradiente1.addColorStop(0.5, c.b1[1]);
+    gradiente1.addColorStop(1, c.b1[2]);
     contexto.fillStyle = gradiente1;
     contexto.fillRect(0, 0, anchoCanvas, altoCanvas);
 
     const centroX2 = anchoCanvas * 0.72 + Math.cos(tiempoAnimacion * 0.0015) * anchoCanvas * 0.32;
     const centroY2 = altoCanvas  * 0.6  + Math.sin(tiempoAnimacion * 0.0020) * altoCanvas  * 0.38;
     const gradiente2 = contexto.createRadialGradient(centroX2, centroY2, 0, centroX2, centroY2, anchoCanvas * 0.55);
-    gradiente2.addColorStop(0, 'rgba(48, 72, 38, 0.55)');
-    gradiente2.addColorStop(0.5, 'rgba(48, 72, 38, 0.18)');
-    gradiente2.addColorStop(1, 'rgba(48, 72, 38, 0)');
+    gradiente2.addColorStop(0, c.b2[0]);
+    gradiente2.addColorStop(0.5, c.b2[1]);
+    gradiente2.addColorStop(1, c.b2[2]);
     contexto.fillStyle = gradiente2;
     contexto.fillRect(0, 0, anchoCanvas, altoCanvas);
 
     const centroX3 = anchoCanvas * 0.5 + Math.sin(tiempoAnimacion * 0.0012 + 2) * anchoCanvas * 0.42;
     const centroY3 = altoCanvas  * 0.3 + Math.cos(tiempoAnimacion * 0.0022 + 1) * altoCanvas  * 0.32;
     const gradiente3 = contexto.createRadialGradient(centroX3, centroY3, 0, centroX3, centroY3, anchoCanvas * 0.45);
-    gradiente3.addColorStop(0, 'rgba(118, 56, 24, 0.28)');
-    gradiente3.addColorStop(0.5, 'rgba(118, 56, 24, 0.08)');
-    gradiente3.addColorStop(1, 'rgba(118, 56, 24, 0)');
+    gradiente3.addColorStop(0, c.b3[0]);
+    gradiente3.addColorStop(0.5, c.b3[1]);
+    gradiente3.addColorStop(1, c.b3[2]);
     contexto.fillStyle = gradiente3;
     contexto.fillRect(0, 0, anchoCanvas, altoCanvas);
 
@@ -225,6 +257,26 @@ faqItems.forEach(item => {
   });
 });
 
+/* ---- TOGGLE TEMA CLARO / OSCURO ---- */
+(function () {
+  const raiz    = document.documentElement;
+  const boton   = document.getElementById('boton-tema');
+  const CLAVE   = 'dn-tema';
+
+  function aplicarTema(tema) {
+    raiz.dataset.tema = tema;
+    localStorage.setItem(CLAVE, tema);
+  }
+
+  aplicarTema(localStorage.getItem(CLAVE) || 'oscuro');
+
+  if (boton) {
+    boton.addEventListener('click', () => {
+      aplicarTema(raiz.dataset.tema === 'claro' ? 'oscuro' : 'claro');
+    });
+  }
+})();
+
 /* ---- HERO — REVEAL POR PALABRAS ---- */
 (function () {
   const h1 = document.querySelector('.titulo-inicio');
@@ -313,6 +365,11 @@ if (window.matchMedia('(pointer: fine)').matches) {
         zona.addEventListener('mouseenter', () => cursorDot.classList.add('cursor-dot--oscuro'));
         zona.addEventListener('mouseleave', () => cursorDot.classList.remove('cursor-dot--oscuro'));
       }
+    });
+
+    document.querySelectorAll('.etapa_card_wrap').forEach(card => {
+      card.addEventListener('mouseenter', () => cursorDot.classList.add('cursor-dot--oscuro'));
+      card.addEventListener('mouseleave', () => cursorDot.classList.remove('cursor-dot--oscuro'));
     });
   }
 }

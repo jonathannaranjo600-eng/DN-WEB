@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-tema="oscuro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,6 +27,22 @@
           <li><a href="#proyectos" class="enlace-nav">Proyectos</a></li>
           <li><a href="#contacto" class="enlace-nav">Contacto</a></li>
         </ul>
+        <button class="boton-tema" id="boton-tema" aria-label="Cambiar tema">
+          <svg class="icono-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icono-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="12" y1="2" x2="12" y2="5"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="5" y2="12"/>
+            <line x1="19" y1="12" x2="22" y2="12"/>
+            <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+            <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+            <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
         <button class="boton-menu-hamburguesa" id="boton-menu" aria-label="Abrir menú">
           <span class="linea-hamburguesa"></span>
           <span class="linea-hamburguesa"></span>
@@ -83,7 +99,7 @@
           <div class="acercade-columna">
             <div class="acercade-icono-contenedor">
               <svg class="acercade-icono" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M45 10 C38 12 30 18 25 26 C18 36 15 42 16 52 C17 60 20 65 24 72 C28 80 30 88 35 96 C40 104 46 115 50 125 C52 130 54 133 56 130 C58 126 59 118 62 110 C66 100 72 92 78 84 C84 76 90 68 92 58 C94 48 91 38 86 30 C80 20 72 13 62 10 C56 8 50 9 45 10Z" fill="#E7E1CA"/>
+                <path d="M45 10 C38 12 30 18 25 26 C18 36 15 42 16 52 C17 60 20 65 24 72 C28 80 30 88 35 96 C40 104 46 115 50 125 C52 130 54 133 56 130 C58 126 59 118 62 110 C66 100 72 92 78 84 C84 76 90 68 92 58 C94 48 91 38 86 30 C80 20 72 13 62 10 C56 8 50 9 45 10Z" fill="currentColor"/>
               </svg>
             </div>
             <div class="acercade-info">
@@ -97,31 +113,31 @@
           <div class="acercade-columna">
             <div class="acercade-icono-contenedor">
               <svg class="acercade-icono" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="5" fill="#E7E1CA" opacity="0.4"/>
-                <circle cx="35" cy="20" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="50" cy="20" r="5" fill="#E7E1CA" opacity="0.6"/>
-                <circle cx="65" cy="20" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="80" cy="20" r="5" fill="#E7E1CA" opacity="0.4"/>
-                <circle cx="20" cy="35" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="35" cy="35" r="6" fill="#E7E1CA" opacity="0.7"/>
-                <circle cx="50" cy="35" r="7" fill="#E7E1CA" opacity="0.85"/>
-                <circle cx="65" cy="35" r="6" fill="#E7E1CA" opacity="0.7"/>
-                <circle cx="80" cy="35" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="20" cy="50" r="5" fill="#E7E1CA" opacity="0.6"/>
-                <circle cx="35" cy="50" r="7" fill="#E7E1CA" opacity="0.85"/>
-                <circle cx="50" cy="50" r="9" fill="#E7E1CA" opacity="1"/>
-                <circle cx="65" cy="50" r="7" fill="#E7E1CA" opacity="0.85"/>
-                <circle cx="80" cy="50" r="5" fill="#E7E1CA" opacity="0.6"/>
-                <circle cx="20" cy="65" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="35" cy="65" r="6" fill="#E7E1CA" opacity="0.7"/>
-                <circle cx="50" cy="65" r="7" fill="#E7E1CA" opacity="0.85"/>
-                <circle cx="65" cy="65" r="6" fill="#E7E1CA" opacity="0.7"/>
-                <circle cx="80" cy="65" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="20" cy="80" r="5" fill="#E7E1CA" opacity="0.4"/>
-                <circle cx="35" cy="80" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="50" cy="80" r="5" fill="#E7E1CA" opacity="0.6"/>
-                <circle cx="65" cy="80" r="5" fill="#E7E1CA" opacity="0.5"/>
-                <circle cx="80" cy="80" r="5" fill="#E7E1CA" opacity="0.4"/>
+                <circle cx="20" cy="20" r="5" fill="currentColor" opacity="0.4"/>
+                <circle cx="35" cy="20" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="50" cy="20" r="5" fill="currentColor" opacity="0.6"/>
+                <circle cx="65" cy="20" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="80" cy="20" r="5" fill="currentColor" opacity="0.4"/>
+                <circle cx="20" cy="35" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="35" cy="35" r="6" fill="currentColor" opacity="0.7"/>
+                <circle cx="50" cy="35" r="7" fill="currentColor" opacity="0.85"/>
+                <circle cx="65" cy="35" r="6" fill="currentColor" opacity="0.7"/>
+                <circle cx="80" cy="35" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="20" cy="50" r="5" fill="currentColor" opacity="0.6"/>
+                <circle cx="35" cy="50" r="7" fill="currentColor" opacity="0.85"/>
+                <circle cx="50" cy="50" r="9" fill="currentColor" opacity="1"/>
+                <circle cx="65" cy="50" r="7" fill="currentColor" opacity="0.85"/>
+                <circle cx="80" cy="50" r="5" fill="currentColor" opacity="0.6"/>
+                <circle cx="20" cy="65" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="35" cy="65" r="6" fill="currentColor" opacity="0.7"/>
+                <circle cx="50" cy="65" r="7" fill="currentColor" opacity="0.85"/>
+                <circle cx="65" cy="65" r="6" fill="currentColor" opacity="0.7"/>
+                <circle cx="80" cy="65" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="20" cy="80" r="5" fill="currentColor" opacity="0.4"/>
+                <circle cx="35" cy="80" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="50" cy="80" r="5" fill="currentColor" opacity="0.6"/>
+                <circle cx="65" cy="80" r="5" fill="currentColor" opacity="0.5"/>
+                <circle cx="80" cy="80" r="5" fill="currentColor" opacity="0.4"/>
               </svg>
             </div>
             <div class="acercade-info">
@@ -136,11 +152,11 @@
           <div class="acercade-columna">
             <div class="acercade-icono-contenedor">
               <svg class="acercade-icono" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="40" stroke="#E7E1CA" stroke-width="3"/>
-                <ellipse cx="50" cy="50" rx="18" ry="40" stroke="#E7E1CA" stroke-width="3"/>
-                <line x1="10" y1="50" x2="90" y2="50" stroke="#E7E1CA" stroke-width="3"/>
-                <path d="M17 30 Q50 22 83 30" stroke="#E7E1CA" stroke-width="2.5" fill="none"/>
-                <path d="M17 70 Q50 78 83 70" stroke="#E7E1CA" stroke-width="2.5" fill="none"/>
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="3"/>
+                <ellipse cx="50" cy="50" rx="18" ry="40" stroke="currentColor" stroke-width="3"/>
+                <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="3"/>
+                <path d="M17 30 Q50 22 83 30" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <path d="M17 70 Q50 78 83 70" stroke="currentColor" stroke-width="2.5" fill="none"/>
               </svg>
             </div>
             <div class="acercade-info">
@@ -220,7 +236,7 @@
               <a href="#contacto" class="boton_cotizacion_servicios">Cotización</a>
               <button class="flecha_servicios" id="flecha_siguiente_servicios" aria-label="Siguiente servicio">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
             </div>
@@ -262,58 +278,77 @@
       </section>
     </div>
 
-    <!-- ==================== SERVICIOS — SLIDE 3: ETAPAS ==================== -->
+    <!-- ==================== SERVICIOS — SLIDE 3: FASES ==================== -->
     <div id="servicios-etapas" class="pantalla-seccion" data-nav="#servicios">
       <section class="seccion_etapas_servicios">
 
-        <!-- Fila 1: pasos 1-2 (izquierda) + imagen pequeña (derecha) -->
-        <div class="etapas_fila reveal">
-          <div class="etapas_pasos_bloque">
-            <div class="etapas_pasos_linea">
-              <div class="etapa_paso">
-                <sup class="etapa_sup">1</sup>
-                <span class="etapa_nombre">Preparación</span>
+        <div class="etapas_encabezado reveal">
+          <div class="etapas_enc_linea"></div>
+          <div class="etapas_enc_texto">
+            <span class="etapas_enc_titulo">Fases</span>
+            <span class="etapas_enc_sub">de creación</span>
+          </div>
+          <div class="etapas_enc_linea"></div>
+        </div>
+
+        <div class="etapas_cards_fila">
+
+          <div class="etapa_card_wrap etapa_card_wrap--alto reveal reveal--delay-1">
+            <div class="etapa_card_tab">01</div>
+            <div class="etapa_card">
+              <div class="etapa_card_frente">
+                <span class="etapa_card_num">1</span>
+                <h3 class="etapa_card_titulo">Discover</h3>
               </div>
-              <span class="etapa_arrow">→</span>
-              <div class="etapa_paso">
-                <sup class="etapa_sup">2</sup>
-                <span class="etapa_nombre">Incubación</span>
+              <div class="etapa_card_dorso">
+                <h3 class="etapa_card_titulo">Discover</h3>
+                <p class="etapa_card_desc">Descubrimos lo que impulsa tu marca a través de claridad de propósito, análisis de audiencia y enfoque de negocio.</p>
               </div>
             </div>
           </div>
-          <div class="etapas_imagen_pequena">
-            <img src="assets/servicios/preparacion.jpg" alt="Preparación" class="etapa_img"/>
-          </div>
-        </div>
 
-        <!-- Fila 2: imagen pequeña (izquierda) + pasos 3-4 (derecha) -->
-        <div class="etapas_fila reveal reveal--delay-2">
-          <div class="etapas_imagen_pequena">
-            <img src="assets/servicios/desarrollo.jpg" alt="Desarrollo" class="etapa_img"/>
-          </div>
-          <div class="etapas_pasos_bloque etapas_pasos_bloque--derecha">
-            <div class="etapas_pasos_linea">
-              <div class="etapa_paso">
-                <sup class="etapa_sup">3</sup>
-                <span class="etapa_nombre">Verificación</span>
+          <div class="etapa_card_wrap etapa_card_wrap--bajo reveal reveal--delay-2">
+            <div class="etapa_card_tab">02</div>
+            <div class="etapa_card">
+              <div class="etapa_card_frente">
+                <span class="etapa_card_num">2</span>
+                <h3 class="etapa_card_titulo">Request</h3>
               </div>
-              <span class="etapa_arrow">→</span>
-              <div class="etapa_paso">
-                <sup class="etapa_sup">4</sup>
-                <span class="etapa_nombre">Desarrollo</span>
+              <div class="etapa_card_dorso">
+                <h3 class="etapa_card_titulo">Request</h3>
+                <p class="etapa_card_desc">Analizamos tu mercado, entendemos a tu competencia e identificamos dónde puedes destacar.</p>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Fila 3: imagen grande (izquierda) + descripción (derecha) -->
-        <div class="etapas_fila etapas_fila--base reveal reveal--delay-4">
-          <div class="etapas_imagen_grande">
-            <img src="assets/servicios/setup.jpg" alt="Setup del proceso" class="etapa_img"/>
+          <div class="etapa_card_wrap etapa_card_wrap--alto reveal reveal--delay-3">
+            <div class="etapa_card_tab">03</div>
+            <div class="etapa_card">
+              <div class="etapa_card_frente">
+                <span class="etapa_card_num">3</span>
+                <h3 class="etapa_card_titulo">Create</h3>
+              </div>
+              <div class="etapa_card_dorso">
+                <h3 class="etapa_card_titulo">Create</h3>
+                <p class="etapa_card_desc">Diseñamos una identidad distintiva usando voz, visuales e historia para construir conexión emocional.</p>
+              </div>
+            </div>
           </div>
-          <div class="etapas_descripcion_bloque">
-            <p class="etapas_descripcion_texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate.</p>
+
+          <div class="etapa_card_wrap etapa_card_wrap--bajo reveal reveal--delay-4">
+            <div class="etapa_card_tab">04</div>
+            <div class="etapa_card">
+              <div class="etapa_card_frente">
+                <span class="etapa_card_num">4</span>
+                <h3 class="etapa_card_titulo">Activate</h3>
+              </div>
+              <div class="etapa_card_dorso">
+                <h3 class="etapa_card_titulo">Activate</h3>
+                <p class="etapa_card_desc">Lanzamos tu marca en todos los canales, creando una experiencia consistente que crece contigo.</p>
+              </div>
+            </div>
           </div>
+
         </div>
 
       </section>
@@ -326,7 +361,7 @@
       <!-- Navegación rápida -->
       <a href="#servicios-etapas" class="proyectos_nav_rapido" aria-label="Volver a Servicios">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
       <div class="proyectos_scroll_h">
@@ -461,27 +496,27 @@
         <div class="columna_redes_contacto reveal">
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="icono_red_social" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#E7E1CA" stroke-width="1.8" fill="none"/>
-              <circle cx="12" cy="12" r="4.5" stroke="#E7E1CA" stroke-width="1.8" fill="none"/>
-              <circle cx="17.5" cy="6.5" r="1.2" fill="#E7E1CA"/>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
             </svg>
           </a>
           <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="icono_red_social" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" fill="#E7E1CA"/>
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" fill="currentColor"/>
             </svg>
           </a>
           <a href="mailto:tuemail@ejemplo.com" class="icono_red_social" aria-label="Correo electrónico">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="4" width="20" height="16" rx="3" stroke="#E7E1CA" stroke-width="1.8" fill="none"/>
-              <path d="M2 7l10 7 10-7" stroke="#E7E1CA" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+              <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
             </svg>
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="icono_red_social" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="20" height="20" rx="4" stroke="#E7E1CA" stroke-width="1.8" fill="none"/>
-              <path d="M7 10v7M7 7v.5" stroke="#E7E1CA" stroke-width="2" stroke-linecap="round"/>
-              <path d="M11 17v-4c0-1.5 1-2 2-2s2 .5 2 2v4M11 10v7" stroke="#E7E1CA" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <path d="M7 10v7M7 7v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M11 17v-4c0-1.5 1-2 2-2s2 .5 2 2v4M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </a>
         </div>

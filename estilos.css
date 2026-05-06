@@ -77,7 +77,7 @@ body {
   background: transparent;
 }
 
-/* Variante para base.html — scroll interno entre secciones */
+/* Variante para index.html — scroll interno entre secciones */
 .contenedor-principal--scroll {
   overflow-y: auto;
   scroll-behavior: smooth;
